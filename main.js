@@ -15,7 +15,8 @@ let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
 let chanceArea = document.getElementById("chance-area");
-let chances = 10;
+let randomNumber = document.getElementById("random-number");
+let chances = 3;
 let gameOver = false;
 let max = 10;
 let min = 1;
@@ -39,6 +40,7 @@ function reset() {
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * max) + 1;
+  randomNumber.textContent = "정답: " + computerNum;
   console.log("정답", computerNum);
 }
 
