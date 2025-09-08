@@ -77,7 +77,7 @@ function play() {
 
   history.push(userValue);
 
-  if (chances < 1) {
+  if (!gameOver && chances < 1) {
     gameOver = true;
     resultArea.textContent = "Game Over!!";
   }
