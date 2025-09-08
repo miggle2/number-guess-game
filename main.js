@@ -32,10 +32,11 @@ function reset() {
   userInput.value = "";
   resultArea.textContent = "결과값이 여기 나옵니다!";
   pickRandomNum();
-  chances = 10;
+  chances = 3;
   chanceArea.textContent = `남은기회: ${chances}번`;
   playButton.disabled = false;
   gameOver = false;
+  history = []
 }
 
 function pickRandomNum() {
@@ -66,12 +67,19 @@ function play() {
   } else {
     resultArea.textContent = "맞췄습니다!!";
     gameOver = true;
+
+    confetti({
+      particleCount: 150,
+      spread: 80,
+      origin: { y: 0.6 },
+    });
   }
 
   history.push(userValue);
 
   if (chances < 1) {
     gameOver = true;
+    resultArea.textContent = "Game Over!!";
   }
 
   if (gameOver) {

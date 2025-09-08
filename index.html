@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="game-container">
-    <h1>숫자 맞추기 게임!</h1>
-    <div id="result-area">결과값이 여기 나옵니다!
-    </div>
-    <div id="chance-area">남은기회:</div>
-    <div id="random-number"></div>
-    <input type="number" id="user-input" />
-    <button id="play-button">Go!</button>
-    <button id="reset-button">Reset</button>
+      <h1>숫자 맞추기 게임!</h1>
+      <div id="result-area">결과값이 여기 나옵니다!</div>
+      <div id="chance-area">남은기회:</div>
+      <div id="random-number"></div>
+      <input type="number" id="user-input" />
+      <div class="button-group">
+        <button id="play-button">Go!</button>
+        <button id="reset-button">Reset</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
